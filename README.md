@@ -1,6 +1,8 @@
 # Term Project: Enterprise Data Architecture
 *Rahul Patel (rbp320), Sophia Tsilerides (smt570)*
+
 *CSCI-GA.2433-001 - Summer 2020*
+
 *New York University*
 
 
