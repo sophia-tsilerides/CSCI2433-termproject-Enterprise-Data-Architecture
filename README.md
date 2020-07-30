@@ -8,4 +8,4 @@ This repository contains the source code to our term project for CSCI 2433 in Su
 
 ### File Descriptions
 
-`Patient_Data_Scraping_and_ETL.ipynb`: web scraper and ETL parser program for Electronic Medical Record samples
+`Patient_Data_Scraping_and_ETL.ipynb`: web scraper and ET parser program for Electronic Medical Record samples
