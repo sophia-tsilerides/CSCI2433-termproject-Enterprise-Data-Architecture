@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+  <title>Portfolio Update Information Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<div class="container">
+  <div class="nav-wrapper">
+
+    <div class="right-side">
+      <div class="brand">
+        Insurance Company: Update Personal Information Form 
+      </div>
+    </div>
+
+    <div class="right-side">
+      <div class="brand">
+        Please use this form to update any previous information you have saved to your account.
+      </div>
+    </div>
+  </div>
+
+<br>
+
+<form action="/action_page.php">
+
+  <label for="lname">New Last Name</label>
+  <input type="text" id="lname" name="lastname" placeholder="Your new last name..">
+
+  <label for="email">New Email</label>
+  <input type="text" id="email" name="pemail" placeholder="Your new email address..">
+
+  <label for="num">New Contact Number</label>
+  <input type="text" id="num" name="pnum" placeholder="Your new number..">
+  
+  <label for="address">New Address</label>
+  <input type="text" id="address" name="paddress" placeholder="Your new address..">
+
+  <label for="country">New Country</label>
+  <select id="country" name="country">
+    <option value="australia">Australia</option>
+    <option value="canada">Canada</option>
+    <option value="usa">USA</option>
+  </select>
+
+  <label for="weight">New Weight (in lbs.)</label>
+  <input type="text" id="weight" name="pweight" placeholder="Your new weight..">
+
+  <p>I developed a new condition:</p>
+
+  <div>
+    <input type="checkbox" id="DIABETES_MELLITUS" name="DIABETES_MELLITUS"
+          checked>
+    <label for="DIABETES_MELLITUS">DIABETES_MELLITUS</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="CIRRHOSIS" name="CIRRHOSIS">
+    <label for="CIRRHOSIS">CIRRHOSIS</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="PNEUMONIA" name="PNEUMONIA">
+    <label for="PNEUMONIA">PNEUMONIA</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="ALZHEIMERS_DISEASE" name="ALZHEIMERS_DISEASE">
+    <label for="ALZHEIMERS_DISEASE">ALZHEIMERS_DISEASE</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="HIV_DISEASE" name="HIV_DISEASE">
+    <label for="HIV_DISEASE">HIV_DISEASE</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="CARDIOVASCULAR_DISEASE" name="CARDIOVASCULAR_DISEASE">
+    <label for="CARDIOVASCULAR_DISEASE">CARDIOVASCULAR_DISEASE</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="HYPERTENSION" name="HYPERTENSION">
+    <label for="HYPERTENSION">HYPERTENSION</label>
+  </div>
+  
+  <input type="submit" value="Submit">
+</form>
