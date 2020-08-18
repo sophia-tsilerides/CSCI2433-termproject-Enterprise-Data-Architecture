@@ -1,0 +1,56 @@
+﻿<?php
+    include("config.php");
+    session_start();
+
+    if($_SERVER["REQUEST_METHOD"] == "POST"){
+
+        $usr = mysqli_real_escape_string($db, $_POST['user']);
+        $pwd = mysqli_real_escape_string($db, $_POST['pass']);
+
+        $sql = "SELECT TYPE FROM Login WHERE USERNAME = '$usr' AND PASSWORD = '$pwd'";
+        $result = mysqli_query($db, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+        $active = $row['active'];
+
+        $count = mysqli_num_rows($result);
+        if($count == 1){
+            session_register("usr");
+            $_SESSION['login_user'] = $usr;
+
+            header("location: customer.html");
+        }else{
+            $error = "Username or Password is invalid. Please try again."
+        }
+    }
+?>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Portfolio Homepage</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form action="" method="post" style="border:1px solid #ccc">
+        <div class="container">
+            <h1>Insure-base</h1>
+            <p>Please use this form to log into your account.</p>
+            <hr>
+
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="user" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pass" required>
+
+            <div class="clearfix">
+                <button type="submit" class="signupbtn">Log In</button>
+            </div>
+
+
+        </div>
+    </form>
+    <div style="font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+</body>
+</html>
